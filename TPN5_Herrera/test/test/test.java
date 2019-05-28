@@ -41,22 +41,39 @@ class test {
 	@Test
 	void test03() {
 		//Arrage
-		String expectedNombre ="Licenciatura en Enologia";
-		String expectedAbreviatura = "Lic. Enolog";
+		String expectedMateria ="Analisis Matematico I";
+		String expectedMateriaAbreviatura = "Ana. Mat. I";
 		AnioaAcademico expectedAnio= AnioAcademico.II;
 		//Act
 		
-		Carrera c01 =new Carrera (expectedNombre,expectedAbreviatura);
+		Materia m01 =new Materia(expectedMateria,expectedMateriaAbreviatura);
 		AnioAcademico a01= new AnioAcademico(expectedAnio);
-		String actualNombre=c01.getNombre();
-		String actualAbreviatura = c01.getAbreviatura();
+		String actualMateria=m01.getMateria();
+		String actualMateriaAbreviatura = m01.getMateriaAbreviatura();
 		String actualAnio = a01.getAnioAcademico();
 		
 		//Assert
-		assertEquals(expectedNombre,actualNombre);
-		assertEquals(expectedAbreviatura,actualAbreviatura);		
+		assertEquals(expectedMateria,actualMateria);
+		assertEquals(expectedMateriaAbreviatura,actualMateriaAbreviatura);		
 		assertEquals(expectedAnio,actualAnio);
 		
 	}
 	
+	@Test
+	void test04() {
+		//Arrage
+		Materia m01= new Materia("Calculo Numerico","Cal. Num",AnioAcademico.III);
+		Materia m02= new Materia("Programacion I","Prog. I",AnioAcademico.II);
+		Materia m03= new Materia("Calculo Numerico","Cal. Num",AnioAcademico.III);
+		
+		//Act
+		boolean actual01=m01.equals(m02);
+		boolean actual02=m01.equals(m03);
+		boolean actual03=m01.equals(m03);
+		
+		//Assert
+		assertEquals(true,actual01);
+		assertEquals(true,actual02);
+		assertEquals(false,actual03);
+	}
 }
