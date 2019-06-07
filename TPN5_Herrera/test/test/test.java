@@ -76,4 +76,16 @@ class test {
 		assertEquals(true,actual02);
 		assertEquals(false,actual03);
 	}
+	@Test
+	void test05() {
+/*5.Que valide un método de la clase carrera que:
+	a. Permita agregar materias.*/
+		//Arrage
+		Materia m01= new Materia("Calculo Numerico","Cal. Num");
+		//Act		
+		Carrera [] addMateria = new Carrera ();
+		//Assert
+		
+
+	}
 }
