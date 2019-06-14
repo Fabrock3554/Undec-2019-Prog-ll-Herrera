@@ -42,17 +42,26 @@ import dominio.Fecha;
 	void test02() {
 		//Arrange
 		Fecha f01 = new Fecha(1,1,2019);
-		Fecha f02 = new Fecha(01,01,2019);
-		Fecha f03 = new Fecha(1,01,2019);
-		Fecha f04 = new Fecha(01,1,2019);
+		Fecha f02 = new Fecha(1,01,2019);
+		Fecha f03 = new Fecha(01,1,2019);
+		Fecha f04 = new Fecha(01,01,2019);
 		
 		//Act
-		boolean 
+		int actual01.getFechaCorta();
+		String actual02.getFechaCorta();
+		String actual03.getFechaCorta();
+		String actual04.getFechaCorta();
+		
+		
 		
 		//Assert
+		assertEquals(f01, actual01);
+		assertEquals(f01, actual02);
+		assertEquals(f01, actual03);
+		assertEquals(f01, actual04);
+	
 	}
-	
-	
+
 	/**
 	 * Validar que al construir una fecha con valores de dias no valido la fecha construida sea 01/01/1900.
 	 * Tomar en cuenta valores mayores y menores a los validos para cada mes.

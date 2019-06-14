@@ -27,6 +27,9 @@ public class Fecha {
 	public int getAnio() {
 		return this.anio;
 	}
+	public String getFechaCorta() {
+		return ;
+	}
 	
 
 }
