@@ -41,24 +41,26 @@ import dominio.Fecha;
 	@Test
 	void test02() {
 		//Arrange
-		Fecha f01 = new Fecha(1,1,2019);
-		Fecha f02 = new Fecha(1,01,2019);
-		Fecha f03 = new Fecha(01,1,2019);
+		Fecha f01 = new Fecha( 1, 1,2019);
+		Fecha f02 = new Fecha( 1,01,2019);
+		Fecha f03 = new Fecha(01, 1,2019);
 		Fecha f04 = new Fecha(01,01,2019);
 		
 		//Act
-		int actual01.getFechaCorta();
-		String actual02.getFechaCorta();
-		String actual03.getFechaCorta();
-		String actual04.getFechaCorta();
+		
+		String expected01="1,1,2019";
+		String expected02="1,01,2019";
+		String expected03="01,1,2019";
+		String expected04="01,01,2019";
 		
 		
 		
 		//Assert
-		assertEquals(f01, actual01);
-		assertEquals(f01, actual02);
-		assertEquals(f01, actual03);
-		assertEquals(f01, actual04);
+		assertEquals(expected01,f01.getFechaCorta());
+		assertEquals(expected02,f02.getFechaCorta());
+		assertEquals(expected03,f03.getFechaCorta());
+		assertEquals(expected04,f04.getFechaCorta());
+		
 	
 	}
 
@@ -68,6 +70,12 @@ import dominio.Fecha;
 	 */
 	@Test
 	void test03() {
+		//Arrange
+		Fecha f01 = new Fecha (01,9,2019);
+		String expected01="01/09/2019";
+		
+		//Act
+		//Assert
 		
 	}
 	
